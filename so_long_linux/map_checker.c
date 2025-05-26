@@ -6,7 +6,7 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 01:30:10 by luevange          #+#    #+#             */
-/*   Updated: 2025/05/13 01:30:31 by luevange         ###   ########.fr       */
+/*   Updated: 2025/05/26 17:48:13 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ int	check_map(t_game *game)
 	i = 0;
 	while (i < game->map.height)
 	{
-    // printf("%i\n",(int)strlen(game->map.grid[i]));
 		if ((int)strlen(game->map.grid[i]) != game->map.width)
 			return (0);
 		i++;

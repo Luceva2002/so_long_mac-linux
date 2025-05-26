@@ -96,7 +96,7 @@ int	allocate_grid(t_game *game)
 	i = 0;
 	while (i < game->map.height)
 	{
-		game->map.grid[i] = calloc(1,sizeof(char) * (game->map.width + 1));
+		game->map.grid[i] = calloc(1, sizeof(char) * (game->map.width + 1));
 		if (!game->map.grid[i])
 		{
 			while (--i >= 0)

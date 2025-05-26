@@ -66,12 +66,12 @@ int	clean_game(t_game *game)
 		{
 			if (game->win)
 			{
-        destroy_images(game);
+				destroy_images(game);
 				mlx_destroy_window(game->mlx, game->win);
 			}
-      mlx_destroy_display(game->mlx);
+			mlx_destroy_display(game->mlx);
 			free(game->mlx);
 		}
 	}
-  exit(0);
+	exit(0);
 }

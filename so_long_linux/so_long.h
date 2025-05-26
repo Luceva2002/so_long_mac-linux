@@ -67,7 +67,7 @@ int				check_map(t_game *game);
 void			render_map(t_game *game);
 int				handle_key(int keycode, t_game *game);
 void			move_player(t_game *game, int new_x, int new_y);
-int       clean_game(t_game *game);
+int				clean_game(t_game *game);
 int				load_images(t_game *game);
 int				load_player_image(t_game *game);
 int				load_wall_image(t_game *game);

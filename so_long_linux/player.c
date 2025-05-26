@@ -6,12 +6,13 @@
 /*   By: luevange <luevange@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 01:31:40 by luevange          #+#    #+#             */
-/*   Updated: 2025/05/13 01:31:05 by luevange         ###   ########.fr       */
+/*   Updated: 2025/05/26 17:48:50 by luevange         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdio.h>
+#include <X11/keysym.h>
 
 int	check_exit(t_game *game, int new_x, int new_y)
 {
@@ -53,11 +54,12 @@ void	move_player(t_game *game, int new_x, int new_y)
 	printf("Moves: %d, Collectibles: %d/%d\n", game->moves,
 		game->player.collectibles, game->map.collectibles);
 }
-#include <X11/keysym.h>
+
 int	handle_key(int keycode, t_game *game)
 {
 	int	new_x;
 	int	new_y;
+
 	new_x = game->player.x;
 	new_y = game->player.y;
 	if (keycode == 'w' || keycode == 126)
@@ -69,7 +71,7 @@ int	handle_key(int keycode, t_game *game)
 	else if (keycode == 'd' || keycode == 124)
 		new_x++;
 	else if (keycode == XK_Escape)
-    clean_game(game);
+		clean_game(game);
 	else
 		return (0);
 	move_player(game, new_x, new_y);
